@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
+
+<url>
+  <loc>http://www.yellowbear.it</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/images/ico/apple-touch-icon-144.png</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/images/ico/apple-touch-icon-114.png</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/images/ico/apple-touch-icon-72.png</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/images/ico/apple-touch-icon-57.png</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>http://www.yellowbear.it/#single-project</loc>
+  <lastmod>2015-09-24</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+</urlset>
