@@ -342,6 +342,33 @@ $("#send-mail").click(function () {
             jQuery('#third-person').removeClass("animated pulse");
         }
     });
+
+    //animate fourth team member
+    jQuery('#fourth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#fourth-person').addClass("animated pulse");
+        } else {
+            jQuery('#fourth-person').removeClass("animated pulse");
+        }
+    });
+
+    //animate fifth team member
+    jQuery('#fifth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#fifth-person').addClass("animated pulse");
+        } else {
+            jQuery('#fifth-person').removeClass("animated pulse");
+        }
+    });
+
+    //animate sixth team member
+    jQuery('#sixth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#sixth-person').addClass("animated pulse");
+        } else {
+            jQuery('#sixth-person').removeClass("animated pulse");
+        }
+    });
     
     //Animate price columns
     jQuery('.price-column, .testimonial').bind('inview', function (event, visible) {
