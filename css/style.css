@@ -294,8 +294,8 @@ p {
     padding-bottom:20px;
 }
 .thumbnail .mask {
-    opacity:0.85;
-    filter: alpha(opacity=85);
+    opacity:0.9;
+    filter: alpha(opacity=90);
     top:100%;
     left:0;
     width:100%;
@@ -876,8 +876,9 @@ p {
 }
 
 .thumbnail p{
-    padding: 0 3px;
+    padding: 5px 5px 0 5px;
     font-size: 13px;
+    font-weight: 400;
 }
 
 .lang-menu{
@@ -927,6 +928,11 @@ p {
 
 .ybColor{
     background-color: #FECE1A;
+}
+
+.small-bio{
+    line-height: 14px;
+    text-align: justify;
 }
 
 /* FINE Modifiche a template di base - LC */
