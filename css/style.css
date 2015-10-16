@@ -66,11 +66,13 @@ p {
     border: none;
     box-shadow: none;
 }
-.navbar .brand img {
-    width:120px;
-    height:40px;
+.navbar .brand{
+    padding-top: 6px;
 }
 
+.navbar .brand img {
+    width:145px;
+}
 
 .navbar .nav > li > a {
     text-transform:uppercase;
@@ -113,6 +115,10 @@ p {
     border-radius:0;
     background:#FECE1A;
     color: #1a2732;
+}
+
+.navbar .btn{
+    margin-top: 10px;
 }
 /******
 2. Layout
@@ -341,8 +347,9 @@ p {
     padding-top:62px;
 }
 .section .title {
-    text-align: center;
+    text-align: justify;
     padding:10px;
+    line-height: 22px;
     /*margin-bottom: 30px;*/
 }
 .section .title h1 {
@@ -871,6 +878,55 @@ p {
 .thumbnail p{
     padding: 0 3px;
     font-size: 13px;
+}
+
+.lang-menu{
+    float: left;
+    height: 43px;
+    width: 35px;
+    padding-top: 7px;
+}
+
+.lang-menu a{
+    position: relative;
+    display: block;
+    float: left;
+    height: 50%;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.lang-ita::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: -2px;
+    height: 15px;
+    width: 15px;
+    background-image: url('../images/ico/it.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;  
+}
+
+.lang-eng::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: -2px;
+    height: 15px;
+    width: 15px;
+    background-image: url('../images/ico/eng.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ybColor{
+    background-color: #FECE1A;
 }
 
 /* FINE Modifiche a template di base - LC */
