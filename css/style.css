@@ -851,23 +851,9 @@ p {
 
 
 /* Modifiche a template di base - LC */
-.services-wrap{
-    display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -ms-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -ms-align-items: center;
-  -webkit-align-items: center;
-  align-items: center;
+.service-circle{
+    float: left;
+    width: 20%;
 }
 
 .service-label{
@@ -947,6 +933,11 @@ p {
     .newsletter form {
         text-align:center;
     }
+
+    .service-circle{
+        width: 33.3333333%;
+    }
+
 }
 @media (max-width: 767px) {
     .info-mail {
@@ -958,5 +949,15 @@ p {
     }
     .price-column, .testimonial {
         margin-top:30px;
+    }
+
+    .service-circle{
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-circle{
+        width: 100%;
     }
 }
