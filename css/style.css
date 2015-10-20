@@ -861,7 +861,7 @@ p {
 /* Modifiche a template di base - LC */
 .service-circle{
     float: left;
-    width: 20%;
+    width: 25%;
 }
 
 .service-label{
@@ -873,6 +873,10 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16px;
+}
+
+.two-lines{
+    top: 38%;
 }
 
 .thumbnail p{
@@ -933,6 +937,36 @@ p {
 .small-bio{
     line-height: 14px;
     text-align: justify;
+    padding: 7px!important;
+}
+
+.service-list{
+    text-align: left;
+    padding-left: 40px;
+    list-style: none;
+}
+
+.service-list li{
+    padding: 0px;
+    position: relative;
+}
+
+.service-list li:before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    display: block;
+    border-radius: 5px;
+    position: absolute;
+    border: 1px solid white;
+    top:5px;
+    left: -20px;
+    background-color: #FECE1A; /* or whatever color you prefer */
+}
+
+.service-list li p{
+    height: auto;
+    margin-bottom: 0px;
 }
 
 /* FINE Modifiche a template di base - LC */
@@ -949,6 +983,31 @@ p {
         line-height: 80px;
     }
 }
+
+@media (max-width: 1024px) {
+    .row-fluid [class*="span"]:first-child{
+        margin-left: 2.127659574468085%;
+    }
+
+    .row-fluid .span2.bioBox{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    .thumbnail p.small-bio{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .thumbnail h3{
+        font-size: 16px;
+    }
+
+    .row-fluid.single-project [class*="span"]:first-child{
+        margin-left: 0%;
+    }
+}
+
 @media (max-width: 979px) {
     body {
         padding-left:0;
@@ -998,7 +1057,37 @@ p {
     }
 
     .service-circle{
-        width: 33.3333333%;
+        width: 50%;
+    }
+    
+    .project-title .close{
+        margin-top: 0px;
+    }
+
+    .project-description{
+        padding-bottom: 10px;
+    }
+
+    .project-title h3{
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .service-list{
+        padding-left: 70px;
+    }
+
+    .row-fluid.team .span2.bioBox{
+        width: 48%;
+        margin-bottom: 10px;
+    }
+    
+    .row-fluid.team [class*="span"]{
+        margin-left: 1%;
+    }
+
+    .thumbnail h3{
+        font-size: 12px;
     }
 
 }
@@ -1017,10 +1106,53 @@ p {
     .service-circle{
         width: 50%;
     }
+
+    .row-fluid.team .span2.bioBox{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .thumbnail h3{
+        font-size: 25px
+    }
+
+    .thumbnail p.small-bio {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .social li a{
+        height: 50px;
+        width: 50px;
+    }
+
+    .section .title > p{
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 @media (max-width: 480px) {
+    .section .container{
+        padding-top: 20px;
+    }
+
     .service-circle{
         width: 100%;
+    }
+
+    .section .title > p{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .service-list{
+        padding-left: 30px;
+    }
+
+    .thumbnail p.small-bio {
+        font-size: 15px;
+        line-height: 22px;
     }
 }

@@ -84,7 +84,7 @@
 .da-slide h2 {
     font-size: 33px;
     width: 50%;
-    top: 120px;
+    top: 167px;
     font-weight:bold;
 }
 
@@ -99,9 +99,11 @@
     padding:0px;
     top: 230px;
     color: #fff;
-    height: 90px;
+    height: 100px;
     overflow: hidden;
     font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
 }
 .da-slide .da-img {
     text-align: center;
