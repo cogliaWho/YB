@@ -969,6 +969,26 @@ p {
     margin-bottom: 0px;
 }
 
+.portfolio-btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.portfolio-btn a{
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding:15px 25px;
+    border: 1px solid #1a2732;
+}
+
+.portfolio-btn a:hover{
+    background-color: #FECE1A;
+    color: black;
+}
+
 /* FINE Modifiche a template di base - LC */
 
 /*

@@ -31,11 +31,11 @@
 <link rel="stylesheet" type="text/css" href="../css/jquery.cslider.css" />
 <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
 <link rel="stylesheet" type="text/css" href="../css/animate.css" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72.png">
-<link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57.png">
-<link rel="shortcut icon" href="../images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72.png">
+<link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57.png">
+<link rel="shortcut icon" href="../../images/ico/favicon.ico">
 </head>
 <body>
 <script src="../js/cookie.js"></script>
@@ -47,348 +47,722 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 //]]></script>
 <div class="navbar">
-<div class="navbar-inner">
-<div class="container">
-<a href="#" class="brand">
-<img src="../images/logo.png" width="120" height="40" alt="Logo" />
-</a>
-<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<i class="icon-menu"></i>
-</button>
-<div class="nav-collapse collapse pull-right">
-<ul class="nav" id="top-navigation">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../index.html#service">Servizi</a></li>
-<li class="active"><a href="../index.html#portfolio">Portfolio</a></li>
-<li><a href="../index.html#about">Chi siamo</a></li>
-<li><a href="../index.html#contact">Contatti</a></li>
-</ul>
-</div>
-</div>
-</div>
+  <div class="navbar-inner">
+    <div class="container" >
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" width="120" height="40" alt="YB" />
+      </a>
+      <div class="lang-menu">
+        <a href="#" class="lang-ita">IT</a>
+        <!-- <a href="../en/portfolio/portfolio.html" class="lang-eng">EN</a> -->
+      </div>
+      <!-- Navigation button, visible on small resolution -->
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-menu"></i>
+      </button>
+                          <!-- Main navigation -->
+      <div class="nav-collapse collapse pull-right">
+        <ul class="nav" id="top-navigation">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#service">Servizi</a></li>
+          <li class="active"><a href="#portfolio">Portfolio</a></li>
+          <li><a href="../index.html#about">Chi siamo</a></li>
+          <li><a href="../index.html#contact">Contatti</a></li>
+        </ul>
+      </div>
+      <!-- End main navigation -->
+    </div>
+  </div>
 </div>
 </div>
 </div>
 
-<div class="section secondary-section " id="portfolio">
-<div class="triangle"></div>
-<div class="container">
-<ul class="nav nav-pills">
-<li class="filter" data-filter="all">
-<a href="">Tutti</a>
-</li>
-<li class="filter" data-filter="grafica">
-<a href="">Grafica</a>
-</li>
-<li class="filter" data-filter="comunicazione">
-<a href="">Comunicazione</a>
-</li>
-<li class="filter" data-filter="contenuti">
-<a href="">Contenuti</a>
-</li>
-</ul>
-<div id="single-project">
-<div id="slidingDiv" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio01.png" alt="project 1" />
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>creazione logo e immagine coordinata</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>MovieLY</div>
-<div>
-<span>Data</span>2015</div>
-</div>
-                                Ideazione e realizzazione logo e immagine coordinata con il sito web e social network. Consulenza per strategie di marketing non convenzionale.
-</div>
-</div>
-</div>
-<div id="slidingDiv1" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio02.png" alt="project 2">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>work-in-progress</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span></div>
-<div>
-<span>Data</span></div>
-</div>
-                                Work-in-progress.
-</div>
-</div>
-</div>
-<div id="slidingDiv2" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio03.png" alt="project 3">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>ghostwriting</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>Software house svizzera (per conto della filiale italiana)</div>
-<div>
-<span>Data</span>2014</div>
-<div>
-                                   Per l'azienda &egrave; stata sviluppata una case history presso un cliente italiano operante nel settore automotive. Le attivit&aacute; hanno riguardato la raccolta contenuti, la preparazione del testo (ghostwriting tecnico tradotto anche in lingua e destinato alla pubblicazione su riviste specializzate di settore in Italia e all'estero) con sua revisione e approvazione da parte del cliente.</div>
-</div>
-</div>
-</div>
-</div>
-<div id="slidingDiv3" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio04.png" alt="project 4">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>Work-in-progress</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span></div>
-<div>
-<span>Data</span></div>
-</div>Work-in-progress.
-</div>
-</div>
-</div>
-<div id="slidingDiv4" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio05.png" alt="project 5">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>Progettazione stand e grafiche</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>Politecnico di Milano. WEIR</div>
-<div>
-<span>Data</span>2014</div>
-</div>Progettazione e allestimento stand con grafiche, poster e materiale informativo come
-d&eacute;pliant e cartoline.                           </div>
-</div>
-</div>
-<div id="slidingDiv5" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio06.png" alt="project 6">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>Case-history</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>Giovane societ&agrave; di design con sede nel lodigiano</div>
-<div>
-<span>Data</span>2014</div>
-<p></p>
-<div>L'incarico ha riguardato la presentazione di come una nota e consolidata tecnologia di lavorazione della lamiera possa veicolare pezzi unici e di design, tali da poter essere esposti o divenire elementi funzionali.</div>
-</div>
-</div>
-</div>
-</div>
-<div id="slidingDiv6" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio07.png" alt="project 7">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>Work-in-progress</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>Ufficio del Turismo di Werfenweg - Austria</div>
-<div>
-<span>Data</span>2013</div>
-<div>Progettazione grafica e impaginazione per catalogo finalizzato alla presentazione invernale ed estiva per il mercato italiano della localit&agrave; turistica austriaca di Werfenweng.</div>
-</div>
-</div>
-</div>
-</div>
-<div id="slidingDiv7" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio08.png" alt="project 8">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>Webste for Some Client</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span></div>
-<div>
-<span>Data</span></div>
-</div>Work-in-progress.
-</div>
-</div>
-</div>
-<div id="slidingDiv8" class="toggleDiv row-fluid single-project">
-<div class="span6">
-<img src="../images/Portfolio09.png" alt="project 9">
-</div>
-<div class="span6">
-<div class="project-description">
-<div class="project-title clearfix">
-<h3>report giornalistico</h3>
-<span class="show_hide close">
-<i class="icon-cancel"></i>
-</span>
-</div>
-<div class="project-info">
-<div>
-<span>Cliente</span>Per conto di ExxonMobil Fuels & Lubricants</div>
-<div>
-<span>Data</span>2014</div>
-<div>
-                                   Report giornalistico di un viaggio nel futuro dell'innovazione nel leggendario McLaren Technology Centre di Woking (Surrey, Inghilterra). Un luogo dove vengono custoditi importanti attivit&aacute; di R&D. L'articolo racconta come Vodafone, McLaren Mercedes e ExxonMobil, colossi di fama mondiale, da circa un ventennio collaborino per accrescere la loro competitivit&aacute;.</div>
-</div>
-</div>
-</div>
-</div>
-<ul id="portfolio-grid" class="thumbnails row">
-<li class="span4 mix grafica">
-<div class="thumbnail">
-<img src="../images/Portfolio01.png" alt="project 1">
-<a href="#single-project" class="more show_hide" rel="#slidingDiv">
-<i class="icon-plus"></i>
-</a>
-<h3>logo e immagine coordinata</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix comunicazione">
-<div class="thumbnail">
-<img src="../images/Portfolio02.png" alt="project 2">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv1">
-<i class="icon-plus"></i>
-</a>
-<h3>work-in-progress</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix contenuti">
-<div class="thumbnail">
-<img src="../images/Portfolio03.png" alt="project 3">
-<a href="#single-project" class="more show_hide" rel="#slidingDiv2">
-<i class="icon-plus"></i>
-</a>
-<h3>ghostwriting</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix comunicazione">
-<div class="thumbnail">
-<img src="../images/Portfolio04.png" alt="project 4">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv3">
-<i class="icon-plus"></i>
-</a>
-<h3>work-in-progress</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix grafica">
-<div class="thumbnail">
-<img src="../images/Portfolio05.png" alt="project 5">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv4">
-<i class="icon-plus"></i>
-</a>
-<h3>stand e immagine coordinata</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix contenuti">
-<div class="thumbnail">
-<img src="../images/Portfolio06.png" alt="project 6">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv5">
-<i class="icon-plus"></i>
-</a>
-<h3>case-history</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix grafica">
-<div class="thumbnail">
-<img src="../images/Portfolio07.png" alt="project 7" />
-<a href="#single-project" class="show_hide more" rel="#slidingDiv6">
-<i class="icon-plus"></i>
-</a>
-<h3>ideazione catalogo</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix comunicazione">
-<div class="thumbnail">
-<img src="../images/Portfolio08.png" alt="project 8">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv7">
-<i class="icon-plus"></i>
-</a>
-<h3>work-in-progress</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-<li class="span4 mix contenuti">
-<div class="thumbnail">
-<img src="../images/Portfolio09.png" alt="project 9">
-<a href="#single-project" class="show_hide more" rel="#slidingDiv8">
-<i class="icon-plus"></i>
-</a>
-<h3>report giornalistico</h3>
-<p></p>
-<div class="mask"></div>
-</div>
-</li>
-</ul>
-</div>
-</div>
+<div class="section secondary-section" style="min-height:600px" id="portfolio">
+  <div class="triangle"></div>
+  <div class="container">
+    <ul class="nav nav-pills">
+      <li class="filter" data-filter="all">
+        <a href="#noAction">Tutti</a>
+      </li>
+      <li class="filter" data-filter="graficaComunicazione">
+        <a href="#noAction">Grafica e comunicazione</a>
+      </li>
+      <li class="filter" data-filter="contenuti">
+        <a href="#noAction">Contenuti</a>
+      </li>
+      <li class="filter" data-filter="webSocial">
+        <a href="#noAction">Web e Socials</a>
+      </li>
+      <li class="filter" data-filter="progettazione">
+        <a href="#noAction">Progettazione e design</a>
+      </li>
+    </ul>
+
+    <div id="single-project">
+
+      <div id="slidingDiv" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio01.jpg" alt="project 1" />
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>creazione logo e immagine coordinata</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> MovieLY
+              </div>
+              <div>
+                <span>Data</span> 2015
+              </div>
+            </div>
+              Ideazione e realizzazione logo e immagine coordinata con il sito web e social network. Consulenza per strategie di marketing non convenzionale.
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio02.jpg" alt="project 2">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>work-in-progress</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span>
+              </div>
+              <div>
+                <span>Data</span>
+              </div>
+            </div>
+                Work-in-progress.
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio03.jpg" alt="project 3">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>ghostwriting</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Software house svizzera (per conto della filiale italiana)
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+              <div>
+                 Per l'azienda &egrave; stata sviluppata una case history presso un cliente italiano operante nel settore automotive. Le attivit&aacute; hanno riguardato la raccolta contenuti, la preparazione del testo (ghostwriting tecnico tradotto anche in lingua e destinato alla pubblicazione su riviste specializzate di settore in Italia e all'estero) con sua revisione e approvazione da parte del cliente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio04.jpg" alt="project 4">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>brochure promozionale</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Solaria s.r.l.
+              </div>
+              <div>
+                <span>Data</span> 2015
+              </div>
+            </div>
+              Progettazione grafica e impaginazione del pieghevole promozionale per apertura nuova sede.
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio05.jpg" alt="project 5">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>progettazione stand e grafiche</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Politecnico di Milano. WEIR
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+            </div>
+              Progettazione e allestimento stand con grafiche, poster e materiale informativo come d&eacute;pliant e cartoline.
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio06.jpg" alt="project 6">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>case-history</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Giovane societ&agrave; di design con sede nel lodigiano
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+              <div>
+                L'incarico ha riguardato la presentazione di come una nota e consolidata tecnologia di lavorazione della lamiera possa veicolare pezzi unici e di design, tali da poter essere esposti o divenire elementi funzionali.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio07.jpg" alt="project 7">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>work-in-progress</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Ufficio del Turismo di Werfenweg - Austria
+              </div>
+              <div>
+                <span>Data</span> 2013
+              </div>
+              <div>
+                Progettazione grafica e impaginazione per catalogo finalizzato alla presentazione invernale ed estiva per il mercato italiano della localit&agrave; turistica austriaca di Werfenweng.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio08.jpg" alt="project 8">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>logo e immagine coordinata</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Orange Consulting
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+            </div>
+              Creazione logo e progettazione grafica coordinata, tra cui ima cartella porta documenti, per nuova apertura.
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio09.jpg" alt="project 9">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>report giornalistico</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Per conto di ExxonMobil Fuels & Lubricants
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+              <div>
+                 Report giornalistico di un viaggio nel futuro dell'innovazione nel leggendario McLaren Technology Centre di Woking (Surrey, Inghilterra). Un luogo dove vengono custoditi importanti attivit&aacute; di R&D. L'articolo racconta come Vodafone, McLaren Mercedes e ExxonMobil, colossi di fama mondiale, da circa un ventennio collaborino per accrescere la loro competitivit&aacute;.
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="slidingDiv9" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio10.jpg" alt="project 10">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>sito web vetrina</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> MovieLy
+              </div>
+              <div>
+                <span>Data</span> 2015
+              </div>
+              <div>
+                Semplice sito vetrina in HTML5 con la presenza di video integrato e form di contatto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv10" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio11.jpg" alt="project 11">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>sito web artistico</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Dario Cogliati
+              </div>
+              <div>
+                <span>Data</span> 2010-2012-2014-2015
+              </div>
+              <div>
+                Sito showcase per l'artista Dario Cogliati. Il sito ha avuto diverse versioni nel corso degli anni per riflettere la continua evoluzione dell'artista.
+                Strutturato come un blog di notizie che fa da cornice alle gallerie di foto e lavori dell'artista. 
+                Ogni versione ha utilizzato teconologie diverse tra cui: javascript pura per la prima versione, jQuery per la seconda e angularJS per la terza. Per il lato server asp.net per la prima versione e PHP per le seguenti.
+                Attualmente si appoggia alla piattaforma Wordpress.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv15" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio16.jpg" alt="project 16">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>sito web + e-commerce</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Handicap...su la testa!
+              </div>
+              <div>
+                <span>Data</span> 2015
+              </div>
+              <div>
+                Sito di rappresentanza della Onlus Handicap...su la testa! Comprende due livelli di navigazione, sezione news, form per iscrizione a newsletter e piccola sezione di e-commerce per l'acquisto di bomboniere.
+                <br>Realizzato su piattaforma Wordpress con un tema completamente personalizzato e customizzabile dal cliente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv11" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio12.jpg" alt="project 12">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>concept store</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> De Kuba
+              </div>
+              <div>
+                <span>Data</span> 2012
+              </div>
+              <div>
+                Proposta creativa e progettazione di spazi per una catena di negozi monomarca di abbigliamento sportivo.
+                Focalizzato sulla ricerca di materiali industriali con l'intento di conferire un'immagine innovativa e giovane.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv12" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio13.jpg" alt="project 13">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>concept store</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Marville
+              </div>
+              <div>
+                <span>Data</span> 2013
+              </div>
+              <div>
+                Studio creativo, progettazione tecnica e realizzazione dell'arredo degli store per un marchio di abbigliamento casual.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv14" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio15.jpg" alt="project 15">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>progettazione stand</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Sony
+              </div>
+              <div>
+                <span>Data</span> 2013
+              </div>
+              <div>
+                Idea creativa, progettazione tecnica e sviluppo per il focus point all'interno dello stand Sony per l'evento Photoshow 2013.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv13" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio14.jpg" alt="project 14">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>post produzione fotografica</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Privato
+              </div>
+              <div>
+                <span>Data</span> 2014
+              </div>
+              <div>
+                Rricerca fotografica e composizione dell’immagine pensata dal cliente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slidingDiv16" class="toggleDiv row-fluid single-project">
+        <div class="span6">
+          <img src="../images/Portfolio17.jpg" alt="project 17">
+        </div>
+        <div class="span6">
+          <div class="project-description">
+            <div class="project-title clearfix">
+              <h3>grafica animata</h3>
+              <span class="show_hide close">
+                <i class="icon-cancel"></i>
+              </span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span>Cliente</span> Other Movie
+              </div>
+              <div>
+                <span>Data</span> 2015
+              </div>
+              <div>
+                Realizzazione spot con grafiche animate per il Lugano Film Festival 2015.<br>
+                <a href="https://vimeo.com/128770300" target="_blank">Link al video</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul id="portfolio-grid" class="thumbnails row">
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio01.jpg" alt="project 1">
+            <a href="#single-project" class="more show_hide" rel="#slidingDiv">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>logo e immagine coordinata</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix contenuti">
+          <div class="thumbnail">
+            <img src="../images/Portfolio02.jpg" alt="project 2">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv1">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>work-in-progress</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix contenuti">
+          <div class="thumbnail">
+            <img src="../images/Portfolio03.jpg" alt="project 3">
+            <a href="#single-project" class="more show_hide" rel="#slidingDiv2">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>ghostwriting</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio04.jpg" alt="project 4">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv3">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>Brochure promozionale</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio05.jpg" alt="project 5">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv4">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>stand e immagine coordinata</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix contenuti">
+          <div class="thumbnail">
+            <img src="../images/Portfolio06.jpg" alt="project 6">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv5">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>case-history</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio07.jpg" alt="project 7" />
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv6">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>ideazione catalogo</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio08.jpg" alt="project 8">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv7">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>logo e immagine coordinata</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix contenuti">
+          <div class="thumbnail">
+            <img src="../images/Portfolio09.jpg" alt="project 9">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv8">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>report giornalistico</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix webSocial">
+          <div class="thumbnail">
+            <img src="../images/Portfolio10.jpg" alt="project 10">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv9">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>sito web vetrina</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix webSocial">
+          <div class="thumbnail">
+            <img src="../images/Portfolio11.jpg" alt="project 11">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv10">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>sito web artistico</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix webSocial">
+          <div class="thumbnail">
+            <img src="../images/Portfolio16.jpg" alt="project 161">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv15">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>sito web + e-commerce</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix progettazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio12.jpg" alt="project 12">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv11">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>concept store</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix progettazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio13.jpg" alt="project 13">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv12">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>concept store</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix progettazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio15.jpg" alt="project 15">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv14">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>Progettazione stand</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio14.jpg" alt="project 14">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv13">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>post produzione fotografica</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+
+        <li class="span3 mix graficaComunicazione">
+          <div class="thumbnail">
+            <img src="../images/Portfolio17.jpg" alt="project 17">
+            <a href="#single-project" class="show_hide more" rel="#slidingDiv16">
+              <i class="icon-plus"></i>
+            </a>
+            <h3>grafica animata</h3>
+            <p></p>
+            <div class="mask"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 
