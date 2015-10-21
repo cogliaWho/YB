@@ -989,6 +989,11 @@ p {
     color: black;
 }
 
+.thumbnail > img{
+    box-sizing: border-box;
+    border: 1px solid #1a2732;
+}
+
 /* FINE Modifiche a template di base - LC */
 
 /*
