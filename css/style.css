@@ -936,7 +936,7 @@ p {
 
 .small-bio{
     line-height: 14px;
-    text-align: justify;
+    text-align: left;
     padding: 7px!important;
 }
 
@@ -989,9 +989,13 @@ p {
     color: black;
 }
 
-.thumbnail > img{
+.thumbnail > img, .single-project img{
     box-sizing: border-box;
     border: 1px solid #1a2732;
+}
+
+.txt-c{
+    text-align: center;
 }
 
 /* FINE Modifiche a template di base - LC */
