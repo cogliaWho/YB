@@ -1000,6 +1000,14 @@ p {
 
 /* FINE Modifiche a template di base - LC */
 
+/* Modifiche a template di base - GAM */
+
+a.link {color:#FECE1A;}
+a.link:link {color:#fff; text-decoration:underline; }
+a.link:hover {background:#FECE1A; color:#1a2732; text-decoration:underline; }
+
+/* FINE Modifiche a template di base - GAM */
+
 /*
 4 Responsible
 ********************************************************************/
