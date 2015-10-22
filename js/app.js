@@ -400,7 +400,7 @@ $("#send-mail").click(function () {
     });
 });
 
-//Initialize google map for contact setion with your location.
+//Initialize google map for contact section with your location.
 
 function initializeMap() {
 
@@ -434,9 +434,9 @@ function initializeMap() {
              content: contentString,
 		});
 
-  //  google.maps.event.addListener(marker, 'click', function () {
-    //    infowindow.open(map, marker);
-   // });
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
 
-    //infowindow.open(map, marker);
+    infowindow.open(map, marker);
 }
