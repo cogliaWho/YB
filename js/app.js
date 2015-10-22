@@ -403,40 +403,104 @@ $("#send-mail").click(function () {
 //Initialize google map for contact section with your location.
 
 function initializeMap() {
+    var deltaCenter = {lat:"0.0055", lon:"0.2005"};
+    var coordMilano = {lat:"45.50337589", lon:"9.172280300"};
+    var coordLissone = {lat:"45.612315", lon:"9.254182"};
+    
+    /* Style of the map */
+    var styles = [
+    {
+      stylers: [
+        { hue: "#ffcf1d" },
+        { saturation: 70 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" },
+        { color: '#1a2732' },
+        { saturation: -80 },
+        { invert_lightness: true }
+      ]
+    },{
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },{
+         featureType: "poi",
+         elementType: "labels",
+         stylers: [
+           { visibility: "off" }
+         ]
+       }
 
-    var lat = '45.50337589'; //Set your latitude.
-    var lon = '9.172280300'; //Set your longitude.
+     ];
+     
 
-    var centerLon = lon - 0.0105;
+    // Create a new StyledMapType object, passing it the array of styles,
+    // as well as the name to be displayed on the map type control.
+    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+    /* Lat. and Lon. of the center of the map */
+    var myCenter = new google.maps.LatLng(coordLissone.lat - deltaCenter.lat, coordLissone.lon - deltaCenter.lon);
 
     var myOptions = {
         scrollwheel: false,
         draggable: false,
         disableDefaultUI: true,
-        center: new google.maps.LatLng(lat, centerLon),
-        zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        center: myCenter,
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style'] 
+        }
     };
+
 
     //Bind map to elemet with id map-canvas
     var image = 'images/marker.png'
     var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
-    var marker = new google.maps.Marker({
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var markerMilano = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(lat, lon),
-	icon: image
+        position: new google.maps.LatLng(coordMilano.lat, coordMilano.lon),
+	    icon: image
     });
 
-    var contentString = 
-             '<p>Yellow Bear Communication - Milano</p>';
+    var markerLissone = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(coordLissone.lat, coordLissone.lon),
+        icon: image
+    });
 
-    var infowindow = new google.maps.InfoWindow({
-             content: contentString,
+    var contentStringMilano = '<p class="txt-c">Yellow Bear Communication<br>Via Diego Guicciardi, 9 - 20158 Milano</p>';
+    var contentStringLissone = '<p class="txt-c">Yellow Bear Communication<br>Via Antonio Pacinotti, 43/C - 20851 Lissone</p>';
+
+    var infowindowMilano = new google.maps.InfoWindow({
+             content: contentStringMilano,
 		});
 
-    google.maps.event.addListener(marker, 'click', function () {
-        infowindow.open(map, marker);
+    var infowindowLissone = new google.maps.InfoWindow({
+             content: contentStringLissone,
+        });
+
+    google.maps.event.addListener(markerMilano, 'click', function () {
+        infowindowMilano.open(map, markerMilano);
     });
 
-    infowindow.open(map, marker);
+    google.maps.event.addListener(markerLissone, 'click', function () {
+        infowindowLissone.open(map, markerLissone);
+    });
+
+    infowindowMilano.open(map, markerMilano);
+
+    infowindowLissone.open(map, markerLissone);
 }

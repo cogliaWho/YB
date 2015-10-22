@@ -41,9 +41,20 @@
 <script src="../js/cookie.js"></script>
 <script>//<![CDATA[
 document.addEventListener('DOMContentLoaded', function(event) {
-    cookieChoices.showCookieConsentBar(' Questo sito usa i cookies per darti una migliore esperienza nella navigazione. Continuando accetti la nostra policy.',
+    if(typeof(Storage) !== "undefined") {
+      var iscookieCheck = localStorage.getItem("yb2015_cookieCheck");
+      if(iscookieCheck == null){
+        localStorage.setItem("yb2015_cookieCheck", "checked");
+        cookieChoices.showCookieConsentBar(' Questo sito usa i cookies per darti una migliore esperienza nella navigazione. Continuando accetti la nostra policy.',
         'Chiudi', 'Maggiori Informazioni',
                  'http://www.yellowbear.it/cookie/cookie_policy.html');
+      }
+
+  } else {
+      cookieChoices.showCookieConsentBar(' Questo sito usa i cookies per darti una migliore esperienza nella navigazione. Continuando accetti la nostra policy.',
+        'Chiudi', 'Maggiori Informazioni',
+                 'http://www.yellowbear.it/cookie/cookie_policy.html');
+  }
   });
 //]]></script>
 <div class="navbar">
