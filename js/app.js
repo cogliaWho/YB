@@ -6,8 +6,8 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
  */
- jQuery(document).ready(function ($) {
 
+ jQuery(document).ready(function ($) {
     var lastId,
     topMenu = $("#top-navigation"),
     topMenuHeight = topMenu.outerHeight(),
@@ -38,7 +38,6 @@
             "border-right": containerWidth / 2 + 'px outset transparent'
         });
     });
-
 
     //Initialize header slider.
     $('#da-slider').cslider();
@@ -117,9 +116,11 @@
 
 
     $(window).load(function () {
+
         function filterPath(string) {
             return string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
         }
+
         $('a[href*=#]').each(function () {
             if (filterPath(location.pathname) == filterPath(this.pathname) && location.hostname == this.hostname && this.hash.replace(/#/, '')) {
                 var $targetId = $(this.hash),
@@ -403,6 +404,7 @@ $("#send-mail").click(function () {
 //Initialize google map for contact section with your location.
 
 function initializeMap() {
+    
     var deltaCenter = {lat:"0.0055", lon:"0.2005"};
     var coordMilano = {lat:"45.50337589", lon:"9.172280300"};
     var coordLissone = {lat:"45.612315", lon:"9.254182"};
@@ -461,9 +463,24 @@ function initializeMap() {
         }
     };
 
+    function checkLanguage(){
+        var langCode = "";
+
+        if(window.location.pathname.indexOf("/en/") != -1){
+            langCode = "en";
+        } else {
+            langCode = "it";
+        }
+
+        return langCode;
+    }
 
     //Bind map to elemet with id map-canvas
-    var image = 'images/marker.png'
+    var image = 'images/marker.png';
+    if(checkLanguage() == "en"){
+        image = '../images/marker.png';
+    } 
+
     var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
     //Associate the styled map with the MapTypeId and set it to display.
     map.mapTypes.set('map_style', styledMap);
