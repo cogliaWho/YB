@@ -998,6 +998,14 @@ p {
     text-align: center;
 }
 
+.contact-info{
+    line-height: 26px;
+}
+
+.indirizzi-mobile{
+    display:none;
+}
+
 /* FINE Modifiche a template di base - LC */
 
 /* Modifiche a template di base - GAM */
@@ -1060,6 +1068,9 @@ a.link:hover {background:#FECE1A; color:#1a2732; text-decoration:underline; }
     .section {
         padding-left:20px;
         padding-right:20px;
+    }
+    .section.contact-section{
+        padding: 0px;
     }
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
         margin-left: 0px;
@@ -1191,5 +1202,41 @@ a.link:hover {background:#FECE1A; color:#1a2732; text-decoration:underline; }
     .thumbnail p.small-bio {
         font-size: 15px;
         line-height: 22px;
+    }
+
+    .map-wrapper{
+        height: auto;
+    }
+    .map-canvas{
+        /*position: static;*/
+        display:none;
+    }
+
+    .indirizzi-desktop{
+        display:none;
+    }
+
+    .indirizzi-mobile{
+        display:block;
+    }
+
+    .indirizzi-mobile a{
+        text-decoration: underline;
+        font-weight: bold;
+        color: #1a2732;
+        background-color: #fece1a;
+    }
+
+    .contact-form{
+        margin-left: 0px!important;
+    }
+
+    .section .container.container-info{
+        padding-top: 0px;
+        padding-bottom: 30px;
+    }
+
+    .footer p{
+        font-size: 14px
     }
 }
