@@ -482,7 +482,7 @@ function initializeMap() {
     });
 
     var contentStringMilano = '<p class="txt-c">Yellow Bear Communication<br>Via Diego Guicciardi, 9 - 20158 Milano</p>';
-    var contentStringLissone = '<p class="txt-c">Yellow Bear Communication<br>Via Antonio Pacinotti, 43/c - 20851 Lissone (MB)</p>';
+    var contentStringLissone = '<p class="txt-c">Yellow Bear Communication<br>Via Antonio Pacinotti, 43/C - 20851 Lissone</p>';
 
     var infowindowMilano = new google.maps.InfoWindow({
              content: contentStringMilano,
