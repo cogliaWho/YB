@@ -29,11 +29,11 @@
     line-height:20px;
 }
 a {
-    color:#1a2732;
+    color:#263949;
     text-decoration: none;
 }
 a:hover {
-    color: #FECE1A;
+    color: #ffdc76;
     text-decoration:none;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +45,7 @@ h1 {
 p {
     padding: 10px;
     font-weight: 100;
-    color: #1a2732;
+    color: #263949;
 }
 
 .navbar {
@@ -81,17 +81,17 @@ p {
     margin:10px 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    border: 1px solid #1a2732;
+    //border: 1px solid #263949;
     box-shadow: none;
     font-size:15px;
     text-shadow: none;
-    color: #1a2732;
+    color: #263949;
     transition: border-color 1s ease;
 }
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    border: 1px solid #FECE1A;
-    color: #1a2732;
-    background-color: #fece1a;
+    //border: 1px solid #ffdc76;
+    color: #263949;
+    background-color: #ffdc76;
     transition: border-color 1s ease;
 }
 .nav-pills {
@@ -105,16 +105,17 @@ p {
     margin-right:5px;
     padding-left:25px;
     padding-right:25px;
-    border: 1px solid #1a2732;
+    //border: 1px solid #263949;
+    transition: background-color 0.4s ease;
 }
 .nav-pills > li > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
-    background: #fece1a;
-    color: #1a2732;
+    background: #ffdc76;
+    color: #263949;
 }
 .navbar .btn-navbar:hover, .navbar .btn-navbar {
     border-radius:0;
-    background:#FECE1A;
-    color: #1a2732;
+    background:#ffdc76;
+    color: #263949;
 }
 
 .navbar .btn{
@@ -145,12 +146,12 @@ p {
 .large-text {
     line-height:1.2em;
     font-size: 30px;
-    color: #1a2732;
+    color: #263949;
     padding:20px;
     margin-bottom:20px;
 }
 .highlighted-box h1, .highlighted-box p {
-    color: #1a2732 !important;
+    color: #263949 !important;
 }
 .circle-border {
     display: inline-block;
@@ -209,34 +210,34 @@ p {
 **********/
  .button,  .button:visited, .button:focus {
     display:inline-block;
-    border:1px solid #1a2732;
-    color:#1a2732;
+    border:1px solid #263949;
+    color:#263949;
     background-color:transparent;
     padding:15px 30px;
     font-size:17px;
     line-height:auto;
 }
 .button:hover, .button:active{
-    background-color:#1a2732;
+    background-color:#263949;
     color:#fff;
 }
 .button-sp, .button-sp:visited, .button-sp:focus {
     border:none;
-    background-color:#FECE1A;
-    color:#1a2732;
+    background-color:#ffdc76;
+    color:#263949;
 }
 .button-sp:hover, .button-sp:active {
-    background-color:#1a2732;
-    color:#FECE1A;
+    background-color:#263949;
+    color:#ffdc76;
 }
 .button-ps, .button-ps:visited, .button-ps:focus {
     border:none;
-    background-color:#1a2732;
-    color:#FECE1A;
+    background-color:#263949;
+    color:#ffdc76;
 }
 .button-ps:hover, .button-ps:active {
-    background-color:#FECE1A;
-    color:#1a2732;
+    background-color:#ffdc76;
+    color:#263949;
 }
 /*
 2.3 Thumbnails - Predefined bootstrap's thumbnail class.
@@ -251,7 +252,7 @@ p {
     border-radius:0;
     box-shadow:none;
     text-align:center;
-    background: #1a2732;
+    background: #263949;
 }
 .thumbnail .more {
     display:block;
@@ -264,10 +265,13 @@ p {
     width:80px;
     height:80px;
     font-size:40px;
-    color:#fff;
+    color:#263949;
     text-decoration:none;
     line-height: 70px;
     text-align: center;
+}
+.txt-blue{
+    color:#263949!important;
 }
 .thumbnail:hover .more {
     top:40%;
@@ -286,7 +290,7 @@ p {
     z-index:4;
 }
 .thumbnail h3 {
-    color: #FECE1A;
+    color: #ffdc76;
     margin-top:10px;
     font-size:20px;
 }
@@ -300,7 +304,7 @@ p {
     left:0;
     width:100%;
     height:100%;
-    background:#1a2732;
+    background:#FFFFFF;
     position:absolute;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -332,10 +336,10 @@ p {
     padding:0;
     width:32px;
     height:32px;
-    color: #FECE1A;
+    color: #ffdc76;
 }
 .social li a:hover {
-    color:#1a2732;
+    color:#263949;
 }
 /*
 3. Sections 
@@ -372,24 +376,24 @@ p {
     border-bottom: 1px solid #d9d97;
 }
 .primary-section, .primary-section .title p, .primary-section h3 {
-    color: #1a2732;
+    color: #263949;
 }
 .primary-section h1 {
-    color:#1a2732;
+    color:#263949;
 }
 .secondary-section {
     background:#fff;
 }
 .secondary-section .title {
-    border-bottom: 1px solid #1a2732;
+    border-bottom: 1px solid #263949;
 }
 .secondary-section h1, .secondary-section .title p {
-    color: #1a2732;
+    color: #263949;
 }
 /* Third section use bacground image */
 .third-section {
     padding-bottom: 70px;
-    background: #fece1A url(../images/brand-bg.png) no-repeat center;
+    background: #ffdc76 url(../images/brand-bg.png) no-repeat center;
     border-top:6px solid #d9d9d7;
 }
 .third-section .container {
@@ -398,7 +402,7 @@ p {
 }
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
-    color: #FECE1A;
+    color: #ffdc76;
 }
 .sub-section {
     margin-top:30px;
@@ -429,7 +433,7 @@ p {
 ***************************************/
  .single-project {
     margin-bottom:30px;
-    background:#1a2732;
+    background:#263949;
 }
 .single-project img {
     width:100%;
@@ -443,7 +447,7 @@ p {
 .project-title {
     margin-top:15px;
     margin-bottom:15px;
-    border-bottom:1px solid #FECE1A;
+    border-bottom:1px solid #ffdc76;
 }
 .project-title h3 {
     float:left;
@@ -452,11 +456,11 @@ p {
     width:80%;
 }
 .project-title .close {
-    color: #FECE1A;
+
     margin-top:10px;
 }
 .project-info span, .project-title h3 {
-    color:#FECE1A;
+    color:#ffdc76;
 }
 .project-info {
     font-weight:100;
@@ -496,7 +500,7 @@ p {
     color:#fff;
 }
 .team .thumbnail .mask {
-    background: #FECE1A;
+    background: #ffdc76;
 }
 .team .thumbnail .mask h2 {
     margin-top:20%;
@@ -532,12 +536,12 @@ p {
     margin:0;
     left: 10px;
     z-index: 1;
-    color: #1a2732;
+    color: #263949;
 }
 .skills li .bar {
     height:40px;
     position:absolute;
-    background-color: #FECE1A;
+    background-color: #ffdc76;
 }
 /*
 3.4 Clients
@@ -546,7 +550,7 @@ p {
     border:1px solid white;
 }
 .client-slider img:hover {
-    background-color:#FECE1A;
+    background-color:#ffdc76;
 }
 .client-nav {
     list-style:none;
@@ -560,24 +564,24 @@ p {
 .client-nav li a {
     display:inherit;
     padding:5px;
-    background:#FECE1A;
+    background:#ffdc76;
     border-radius:3px;
     width:20px;
     height:20px;
 }
 .client-nav li a:hover {
-    background:#1a2732;
+    background:#263949;
 }
 .testimonial p {
-    color:#1a2732;
-    background:#FECE1A;
+    color:#263949;
+    background:#ffdc76;
     padding:15px;
     margin:0;
 }
 .testimonial .arrow {
     margin-left:10px;
     width:0;
-    border-top:10px solid #FECE1A;
+    border-top:10px solid #ffdc76;
     border-left: 20px outset transparent;
     border-right: 20px outset transparent;
 }
@@ -626,10 +630,10 @@ p {
     text-align:center;
 }
 .price-column h3 {
-    background-color:#1a2732;
+    background-color:#263949;
     text-transform:uppercase;
     text-align: center;
-    color:#FECE1A;
+    color:#ffdc76;
     padding:40px 0px;
     font-size: 36px;
     margin-top:0px;
@@ -658,7 +662,7 @@ p {
 .price-text{
     margin:30px 0 20px;
     font-size:20px;
-    color: #1a2732;
+    color: #263949;
     font-weight:normal;
 }
 /*
@@ -685,17 +689,17 @@ p {
 }
 .newsletter .button-sp:hover, .newsletter .button-sp:active {
     background-color:#FFF;
-    color:#1a2732;
+    color:#263949;
 }
 
 /*
 3.7 Contact
 ********************************************************************/
  .contact {
-    background: #FECE1A;
+    background: #ffdc76;
 }
 .contact h1, .contact h2, .contact h3, .contact h4, .contact h5, .contact h6, .contact .section .title > p, .contact .social > li > a {
-    color: #1a2732;
+    color: #263949;
 }
 .contact textarea, .contact input[type="text"], .contact input[type="email"] {
     padding: 10px;
@@ -758,7 +762,7 @@ p {
     color:#fff;
 }
 .contact .social li a:hover {
-    color:#1a2732;
+    color:#263949;
 }
 .contact-form {
     background:#fff;
@@ -780,7 +784,7 @@ p {
     font-size:17px;
 }
 .message-btn:hover {
-    background-color:#FECE1A;
+    background-color:#ffdc76;
 }
 .contact-info {
     text-align:center;
@@ -791,16 +795,16 @@ p {
     width:60%;
     margin:0 auto;
     padding:15px;
-    color:#1a2732;
+    color:#263949;
 }
 .black {
-    color:#1a2732;
+    color:#263949;
 }
 /*
 3.8 Footer
 ********************************************************************/
  .footer {
-    background: #1a2732;
+    background: #263949;
     text-align: center;
 }
 .footer > p {
@@ -820,7 +824,7 @@ p {
     right:20px;
 	border:1px solid #fff;
     display:none;
-    background: #FECE1A;
+    background: #ffdc76;
 }
 .scrollup > a {
     position:relative;
@@ -833,7 +837,7 @@ p {
 ********************************************************************/
 
 #cookieInfoLink {                      
-  color: #1a2732;                /* il testo del link che aprire la pagina della cookie policy è rosso (#E00)  */
+  color: #263949;                /* il testo del link che aprire la pagina della cookie policy è rosso (#E00)  */
   text-decoration: underline; /* questa proprietà indica che il testo del link è sottolineato  */
 }
 #cookieInfoLink:hover {       /* la parola hover, vicino al selettore, indica che le proprietà seguenti verranno applicate... */
@@ -843,8 +847,8 @@ p {
 }
 #cookieChoiceDismiss {        /* Impostiamo per il link "accetto/ok/chiudi" le proprietà per renderlo... */
 			      /* ...visivamente come un pulsante */
-  background-color: #fece1a;     /* lo sfondo è verde (#0A0) */
-  color: #1a2732;                /* Il colore del testo è bianco (#FFF) */
+  background-color: #ffdc76;     /* lo sfondo è verde (#0A0) */
+  color: #263949;                /* Il colore del testo è bianco (#FFF) */
   text-decoration: none;      /* Il testo non è sottolineato         */
   font-weight: 600;           /* Il testo è in grassetto             */
   font-size: 16px;
@@ -853,7 +857,7 @@ p {
 }
 #cookieChoiceDismiss:hover {  /* Passando il mouse sopra il pulsante, questo cambia colore in verde chiaro. */
   background-color: #eee;
-  color: #1a2732; 
+  color: #263949; 
 }
 
 
@@ -931,7 +935,7 @@ p {
 }
 
 .ybColor{
-    background-color: #FECE1A;
+    background-color: #ffdc76;
 }
 
 .small-bio{
@@ -961,12 +965,22 @@ p {
     border: 1px solid white;
     top:5px;
     left: -20px;
-    background-color: #FECE1A; /* or whatever color you prefer */
+    background-color: #ffdc76; /* or whatever color you prefer */
 }
 
 .service-list li p{
     height: auto;
     margin-bottom: 0px;
+}
+
+.da-slide span.circle-list{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid #263949;
+    opacity: 1;
+    background-color: #ffdc76; /* or whatever color you prefer */
 }
 
 .portfolio-btn{
@@ -981,17 +995,18 @@ p {
     -moz-border-radius: 0;
     border-radius: 0;
     padding:15px 25px;
-    border: 1px solid #1a2732;
+    border: 1px solid #263949;
+    transition: background-color 0.5s ease;
 }
 
 .portfolio-btn a:hover{
-    background-color: #FECE1A;
-    color: black;
+    background-color: #ffdc76;
+    color: #263949;
 }
 
 .thumbnail > img, .single-project img{
     box-sizing: border-box;
-    border: 1px solid #1a2732;
+    border: 1px solid #263949;
 }
 
 .txt-c{
@@ -1010,9 +1025,9 @@ p {
 
 /* Modifiche a template di base - GAM */
 
-a.link {color:#FECE1A;}
+a.link {color:#ffdc76;}
 a.link:link {color:#fff; text-decoration:underline; }
-a.link:hover {background:#FECE1A; color:#1a2732; text-decoration:underline; }
+a.link:hover {background:#ffdc76; color:#263949; text-decoration:underline; }
 
 /* FINE Modifiche a template di base - GAM */
 
@@ -1223,8 +1238,8 @@ a.link:hover {background:#FECE1A; color:#1a2732; text-decoration:underline; }
     .indirizzi-mobile a{
         text-decoration: underline;
         font-weight: bold;
-        color: #1a2732;
-        background-color: #fece1a;
+        color: #263949;
+        background-color: #ffdc76;
     }
 
     .contact-form{

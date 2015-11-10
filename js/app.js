@@ -308,6 +308,12 @@ $("#send-mail").click(function () {
         }
     });
 
+    jQuery('.thumbnail').hover( function () {
+        jQuery(this).find("h3").addClass("txt-blue");
+    }, function(){
+        jQuery(this).find("h3").removeClass("txt-blue");
+    });
+
     //Animate triangles
     jQuery('.triangle').bind('inview', function (event, visible) {
         if (visible == true) {
