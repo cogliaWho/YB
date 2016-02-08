@@ -69,7 +69,7 @@
     // Bind to scroll
     $(window).scroll(function () {
 
-        //Display or hide scroll to top button 
+        //Display or hide scroll to top button
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
@@ -120,6 +120,8 @@
         function filterPath(string) {
             return string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
         }
+
+        $(".hp-banner").fadeOut(1000);
 
         $('a[href*=#]').each(function () {
             if (filterPath(location.pathname) == filterPath(this.pathname) && location.hostname == this.hostname && this.hash.replace(/#/, '')) {
@@ -261,6 +263,17 @@ $("#send-mail").click(function () {
         return false; // stops user browser being directed to the php file
     });
 
+    $( ".vert-section" ).hover(
+      function() {
+        $( this ).find(".orso-footer").hide();
+        $( this ).find(".hp-title-wrap").css({'bottom': '-300px', 'opacity': 0.5});
+        $( this ).find(".orso-bg").css({'opacity': 1});
+      }, function() {
+        $( this ).find(".orso-footer").show();
+        $( this ).find(".hp-title-wrap").css({'bottom': '0px', 'opacity': 1});
+        $( this ).find(".orso-bg").css({'opacity': 0});
+      }
+    );
 
 
     //Function for show or hide portfolio desctiption.
@@ -298,8 +311,8 @@ $("#send-mail").click(function () {
     /************************
     Animate elements
     *************************/
-    
-    //Animate thumbnails 
+
+    //Animate thumbnails
     jQuery('.thumbnail').one('inview', function (event, visible) {
         if (visible == true) {
             jQuery(this).addClass("animated fadeInDown");
@@ -322,7 +335,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-    
+
     //animate first team member
     jQuery('#first-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -331,7 +344,7 @@ $("#send-mail").click(function () {
             jQuery('#first-person').removeClass("animated pulse");
         }
     });
-    
+
     //animate sectond team member
     jQuery('#second-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -376,7 +389,7 @@ $("#send-mail").click(function () {
             jQuery('#sixth-person').removeClass("animated pulse");
         }
     });
-    
+
     //Animate price columns
     jQuery('.price-column, .testimonial').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -385,7 +398,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-    
+
     //Animate contact form
     jQuery('.contact-form').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -405,16 +418,18 @@ $("#send-mail").click(function () {
             });
         }
     });
+
+
 });
 
 //Initialize google map for contact section with your location.
 
 function initializeMap() {
-    
+
     var deltaCenter = {lat:"0.0055", lon:"0.2005"};
     var coordMilano = {lat:"45.50337589", lon:"9.172280300"};
     var coordLissone = {lat:"45.612315", lon:"9.254182"};
-    
+
     /* Style of the map */
     var styles = [
     {
@@ -447,7 +462,7 @@ function initializeMap() {
        }
 
      ];
-     
+
 
     // Create a new StyledMapType object, passing it the array of styles,
     // as well as the name to be displayed on the map type control.
@@ -465,7 +480,7 @@ function initializeMap() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 
         mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style'] 
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
         }
     };
 
@@ -485,7 +500,7 @@ function initializeMap() {
     var image = 'images/marker.png';
     if(checkLanguage() == "en"){
         image = '../images/marker.png';
-    } 
+    }
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
     //Associate the styled map with the MapTypeId and set it to display.
