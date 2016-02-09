@@ -1320,7 +1320,7 @@ a.link:hover {background:#ffdc76; color:#263949; text-decoration:underline; }
 
 .hp-title{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700!important;
     text-transform: uppercase;
     line-height: 2.5rem;
@@ -1332,17 +1332,19 @@ a.link:hover {background:#ffdc76; color:#263949; text-decoration:underline; }
 
 .orso-bg{
     opacity: 0;
-    width: 228px;
-    height: 190px;
+    width: 200px;
+    height: 167px;
     background-image: url(../images/orso-hp.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     transition: all 0.8s ease;
 }
 
 .orso-bg p{
     text-align: center;
-    padding-top: 60px;
+    padding-top: 40px;
+    font-size: 16px;
 }
 
 .first-triangle{
@@ -1366,4 +1368,84 @@ a.link:hover {background:#ffdc76; color:#263949; text-decoration:underline; }
     background-size: contain;
     position: absolute;
 
+}
+
+@media (min-width: 1200px) {
+    .hp-title{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .orso-bg{
+        opacity: 0;
+        width: 228px;
+        height: 190px;
+    }
+
+    .orso-bg p{
+        padding-top: 60px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 979px) {
+    .vert-section{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .vert-section{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .vert-section{
+        height: 50%;
+        width: 50%;
+    }
+
+    .hp-title{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .orso-bg{
+        width: 180px;
+        height: 150px;
+    }
+
+    .orso-bg p{
+        padding-top: 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    .hp-landing{
+        height: 1000px;
+    }
+
+    .vert-section{
+        height: 250px;
+        width: 100%;
+    }
+
+    .hp-title{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+    .orso-bg{
+        width: 200px;
+        height: 167px;
+    }
+
+    .orso-bg p{
+        padding-top: 40px;
+        font-size: 16px;
+    }
 }
