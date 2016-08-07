@@ -6,8 +6,8 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
  */
- jQuery(document).ready(function ($) {
 
+ jQuery(document).ready(function ($) {
     var lastId,
     topMenu = $("#top-navigation"),
     topMenuHeight = topMenu.outerHeight(),
@@ -39,7 +39,6 @@
         });
     });
 
-
     //Initialize header slider.
     $('#da-slider').cslider();
 
@@ -70,7 +69,7 @@
     // Bind to scroll
     $(window).scroll(function () {
 
-        //Display or hide scroll to top button 
+        //Display or hide scroll to top button
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
@@ -117,9 +116,13 @@
 
 
     $(window).load(function () {
+
         function filterPath(string) {
             return string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
         }
+
+        $(".hp-banner").fadeOut(1000);
+
         $('a[href*=#]').each(function () {
             if (filterPath(location.pathname) == filterPath(this.pathname) && location.hostname == this.hostname && this.hash.replace(/#/, '')) {
                 var $targetId = $(this.hash),
@@ -260,6 +263,17 @@ $("#send-mail").click(function () {
         return false; // stops user browser being directed to the php file
     });
 
+    $( ".vert-section" ).hover(
+      function() {
+        $( this ).find(".orso-footer").hide();
+        $( this ).find(".hp-title-wrap").css({'bottom': '-300px', 'opacity': 0.5});
+        $( this ).find(".orso-bg").css({'opacity': 1});
+      }, function() {
+        $( this ).find(".orso-footer").show();
+        $( this ).find(".hp-title-wrap").css({'bottom': '0px', 'opacity': 1});
+        $( this ).find(".orso-bg").css({'opacity': 0});
+      }
+    );
 
 
     //Function for show or hide portfolio desctiption.
@@ -297,14 +311,20 @@ $("#send-mail").click(function () {
     /************************
     Animate elements
     *************************/
-    
-    //Animate thumbnails 
+
+    //Animate thumbnails
     jQuery('.thumbnail').one('inview', function (event, visible) {
         if (visible == true) {
             jQuery(this).addClass("animated fadeInDown");
         } else {
             jQuery(this).removeClass("animated fadeInDown");
         }
+    });
+
+    jQuery('.thumbnail').hover( function () {
+        jQuery(this).find("h3").addClass("txt-blue");
+    }, function(){
+        jQuery(this).find("h3").removeClass("txt-blue");
     });
 
     //Animate triangles
@@ -315,7 +335,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-    
+
     //animate first team member
     jQuery('#first-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -324,7 +344,7 @@ $("#send-mail").click(function () {
             jQuery('#first-person').removeClass("animated pulse");
         }
     });
-    
+
     //animate sectond team member
     jQuery('#second-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -342,7 +362,34 @@ $("#send-mail").click(function () {
             jQuery('#third-person').removeClass("animated pulse");
         }
     });
-    
+
+    //animate fourth team member
+    jQuery('#fourth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#fourth-person').addClass("animated pulse");
+        } else {
+            jQuery('#fourth-person').removeClass("animated pulse");
+        }
+    });
+
+    //animate fifth team member
+    jQuery('#fifth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#fifth-person').addClass("animated pulse");
+        } else {
+            jQuery('#fifth-person').removeClass("animated pulse");
+        }
+    });
+
+    //animate sixth team member
+    jQuery('#sixth-person').bind('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery('#sixth-person').addClass("animated pulse");
+        } else {
+            jQuery('#sixth-person').removeClass("animated pulse");
+        }
+    });
+
     //Animate price columns
     jQuery('.price-column, .testimonial').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -351,7 +398,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-    
+
     //Animate contact form
     jQuery('.contact-form').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -371,45 +418,127 @@ $("#send-mail").click(function () {
             });
         }
     });
+
+
 });
 
-//Initialize google map for contact setion with your location.
+//Initialize google map for contact section with your location.
 
 function initializeMap() {
 
-    var lat = '45.50337589'; //Set your latitude.
-    var lon = '9.172280300'; //Set your longitude.
+    var deltaCenter = {lat:"0.0055", lon:"0.2005"};
+    var coordMilano = {lat:"45.50337589", lon:"9.172280300"};
+    var coordLissone = {lat:"45.612315", lon:"9.254182"};
 
-    var centerLon = lon - 0.0105;
+    /* Style of the map */
+    var styles = [
+    {
+      stylers: [
+        { hue: "#ffcf1d" },
+        { saturation: 70 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" },
+        { color: '#1a2732' },
+        { saturation: -80 },
+        { invert_lightness: true }
+      ]
+    },{
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },{
+         featureType: "poi",
+         elementType: "labels",
+         stylers: [
+           { visibility: "off" }
+         ]
+       }
+
+     ];
+
+
+    // Create a new StyledMapType object, passing it the array of styles,
+    // as well as the name to be displayed on the map type control.
+    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+    /* Lat. and Lon. of the center of the map */
+    var myCenter = new google.maps.LatLng(coordLissone.lat - deltaCenter.lat, coordLissone.lon - deltaCenter.lon);
 
     var myOptions = {
         scrollwheel: false,
         draggable: false,
         disableDefaultUI: true,
-        center: new google.maps.LatLng(lat, centerLon),
-        zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        center: myCenter,
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
     };
 
+    function checkLanguage(){
+        var langCode = "";
+
+        if(window.location.pathname.indexOf("/en/") != -1){
+            langCode = "en";
+        } else {
+            langCode = "it";
+        }
+
+        return langCode;
+    }
+
     //Bind map to elemet with id map-canvas
-    var image = 'images/marker.png'
+    var image = 'images/marker.png';
+    if(checkLanguage() == "en"){
+        image = '../images/marker.png';
+    }
+
     var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
-    var marker = new google.maps.Marker({
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var markerMilano = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(lat, lon),
-	icon: image
+        position: new google.maps.LatLng(coordMilano.lat, coordMilano.lon),
+	    icon: image
     });
 
-    var contentString = 
-             '<p>Yellow Bear Communication - Milano</p>';
+    var markerLissone = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(coordLissone.lat, coordLissone.lon),
+        icon: image
+    });
 
-    var infowindow = new google.maps.InfoWindow({
-             content: contentString,
+    var contentStringMilano = '<p class="txt-c">Yellow Bear Communication<br>Via Diego Guicciardi, 9 - 20158 Milano</p>';
+    var contentStringLissone = '<p class="txt-c">Yellow Bear Communication<br>Via Antonio Pacinotti, 43/c - 20851 Lissone (MB)</p>';
+
+    var infowindowMilano = new google.maps.InfoWindow({
+             content: contentStringMilano,
 		});
 
-  //  google.maps.event.addListener(marker, 'click', function () {
-    //    infowindow.open(map, marker);
-   // });
+    var infowindowLissone = new google.maps.InfoWindow({
+             content: contentStringLissone,
+        });
 
-    //infowindow.open(map, marker);
+    google.maps.event.addListener(markerMilano, 'click', function () {
+        infowindowMilano.open(map, markerMilano);
+    });
+
+    google.maps.event.addListener(markerLissone, 'click', function () {
+        infowindowLissone.open(map, markerLissone);
+    });
+
+    infowindowMilano.open(map, markerMilano);
+
+    infowindowLissone.open(map, markerLissone);
 }
